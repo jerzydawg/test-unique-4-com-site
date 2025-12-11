@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getSiteName, getKeyword, getDomain, getSiteURL } from '../lib/site-config';
+
+const siteName = getSiteName();
+const keyword = getKeyword();
+const domain = getDomain();
+const siteURL = getSiteURL();
+
+const title = "Free Government Phone - Apply in 2 Minutes | " + siteName;
+const description = "Apply for your free government phone in just 2 minutes. Get approved instantly with no credit check required. Free phone service and data included.";
+const canonical = siteURL + "/apply";
+
+const jsonLD = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Free Government Phone - Apply in 2 Minutes",
+  "description": description,
+  "author": {
+    "@type": "Organization",
+    "name": siteName
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": siteName
+  },
+  "datePublished": "2025-12-11",
+  "dateModified": "2025-12-11",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to get approved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most applications are approved within minutes. Once approved, your free government phone ships within 7-10 business days to your address."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "What documents do I need to apply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll need proof of income or participation in qualifying programs like SNAP, Medicaid, or housing assistance. A government-issued ID is also required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there really no cost for the phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the phone, activation, and monthly service are completely free. There are no hidden fees, deposits, or credit checks required."
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLD={[jsonLD, faqSchema]}
+>
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li>
+          <a href="/" class="text-[var(--color-primary)] hover:underline">Home</a>
+        </li>
+        <li class="text-gray-500">/</li>
+        <li class="text-gray-700 font-medium">Apply</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Free Government Phone</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Get your free smartphone with unlimited talk, text, and data in just 2 minutes. No credit check, no deposits, no monthly bills.
+      </p>
+      <a href="#eligibility-checker" class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold py-3 px-6 rounded-xl shadow-lg">
+        Start Your Application
+      </a>
+    </div>
+
+    <!-- Intro Section -->
+    <section id="intro" class="mb-16">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Get Your Phone Today</h2>
+          <p class="text-gray-700 mb-4">
+            Millions of Americans qualify for a Free Government Phone through the Lifeline program. This federal program helps low-income families stay connected with friends, family, and emergency services at no cost.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Test Unique Site 4 makes it simple to check your eligibility and submit your application. Most people get approved instantly and receive their phone within a week.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Your free phone comes with unlimited talk and text, plus high-speed data every month. There are no contracts, no credit checks, and no surprise fees.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center text-gray-700">
+              <span class="w-2 h-2 rounded-full mr-3" style="background-color: var(--color-primary)"></span>
+              Brand new Android smartphone
+            </li>
+            <li class="flex items-center text-gray-700">
+              <span class="w-2 h-2 rounded-full mr-3" style="background-color: var(--color-primary)"></span>
+              Unlimited talk and text nationwide
+            </li>
+            <li class="flex items-center text-gray-700">
+              <span class="w-2 h-2 rounded-full mr-3" style="background-color: var(--color-primary)"></span>
+              High-speed data included monthly
+            </li>
+            <li class="flex items-center text-gray-700">
+              <span class="w-2 h-2 rounded-full mr-3" style="background-color: var(--color-primary)"></span>
+              Free shipping to your door
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Quick Stats</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Application Time:</span>
+              <span class="font-semibold text-gray-900">2 Minutes</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Approval Time:</span>
+              <span class="font-semibold text-gray-900">Instant</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Monthly Cost:</span>
+              <span class="font-semibold" style="color: var(--color-primary)">$0.00</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Credit Check:</span>
+              <span class="font-semibold text-gray-900">None Required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Checker -->
+    <section id="eligibility-checker" class="mb-16">
+      <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-sm">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Check Your Eligibility</h2>
+        <div class="max-w-2xl mx-auto">
+          <p class="text-gray-600 text-center mb-8">
+            Answer these quick questions to see if you qualify for a Free Government Phone:
+          </p>
+          <div class="space-y-6">
+            <div class="border border-gray-300 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 mb-4">Do you receive any of these benefits?</h3>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <label class="flex items-center space-x-3 cursor-pointer">
+                  <input type="checkbox" class="rounded border-gray-300">
+                  <span class="text-gray-700">SNAP (Food Stamps)</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer">
+                  <input type="checkbox" class="rounded border-gray-300">
+                  <span class="text-gray-700">Medicaid</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer">
+                  <input type="checkbox" class="rounded border-gray-300">
+                  <span class="text-gray-700">SSI</span>
+                </label>
+                <label class="flex items-center space-x-3 cursor-pointer">
+                  <input type="checkbox" class="rounded border-gray-300">
+                  <span class="text-gray-700">Housing Assistance</span>
+                </label>
+              </div>
+            </div>
+            <div class="border border-gray-300 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 mb-4">What's your household income?</h3>
+              <select class="w-full p-3 border border-gray-300 rounded-lg">
+                <option>Select income range</option>
+                <option>Under $15,
